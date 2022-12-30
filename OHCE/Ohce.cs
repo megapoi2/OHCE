@@ -15,20 +15,34 @@ public class Ohce
 
     public string Palindrome(string input)
     {
-        var stringBuilder = 
-            new StringBuilder(_langue.DireBonjour(_périodeJournée));
+
+        var stringBuilder = new StringBuilder();
 
         var reversed = new string(
             input.Reverse().ToArray()
         );
 
-        stringBuilder.Append(reversed);
+        
 
         if (reversed.Equals(input))
             stringBuilder.Append(_langue.BienDit);
-
-        stringBuilder.Append(_langue.AuRevoir);
-
+        else { stringBuilder.Append(reversed); }
         return stringBuilder.ToString();
+    }
+
+    public string DireAurevoir()
+    {
+        return _langue.AuRevoir;
+    }
+
+    public string DireBonjour()
+    {
+        return _langue.DireBonjour(_périodeJournée);
+    }
+
+    public string DemanderUnPalindrome()
+    {
+        return _langue.DemanderUnPalindrome;
+
     }
 }

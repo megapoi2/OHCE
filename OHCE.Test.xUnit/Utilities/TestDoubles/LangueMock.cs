@@ -7,5 +7,7 @@
         public string DireBonjour(PériodeJournée période) => string.Empty; 
 
         public string AuRevoir { get; init; } = string.Empty;
+
+        public string DemanderUnPalindrome { get; init; } = string.Empty;
     }
 }

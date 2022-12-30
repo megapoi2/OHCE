@@ -14,6 +14,7 @@ namespace OHCE
             public const string Bonjour = "Bonjour";
             public const string AuRevoir = "Au revoir";
             public const string Bonsoir = "Bonsoir";
+            public const string DemanderUnPalindrome = "Entrez un mot pour savoir si c'est un palindrome";
         }
 
         public static class English
@@ -21,6 +22,7 @@ namespace OHCE
             public const string BienDit = "Well said";
             public const string Bonjour = "Hello";
             public const string AuRevoir = "Goodbye";
+            public const string DemanderUnPalindrome = "Input a word to know if it's a palindrome or not";
         }
     }
 }
