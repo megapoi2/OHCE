@@ -19,5 +19,33 @@ namespace OHCE.Test.xUnit
             // ALORS on me répond <salutationAttendue>
             Assert.Equal(salutationAttendue, salutation);
         }
+        [Theory]
+        [InlineData(Expressions.Français.AuRevoir)]
+        public void DireAuRevoirTest(string aurevoirAttendue)
+        {
+            
+            var ohce = new Ohce(new Langues.LangueFrançaise(), PériodeJournée.Matin);
+            Console.WriteLine(ohce.DireBonjour());
+            Console.WriteLine(ohce.DemanderUnPalindrome());
+
+            var aurevoir = ohce.DireAurevoir();
+
+            Assert.Equal(aurevoirAttendue, aurevoir);
+        }
+        [Theory]
+        [InlineData(Expressions.English.AuRevoir)]
+        public void DireAuRevoirTestEN(string aurevoirAttendue)
+        {
+
+            var ohce = new Ohce(new Langues.LangueAnglaise(), PériodeJournée.Matin);
+            Console.WriteLine(ohce.DireBonjour());
+            Console.WriteLine(ohce.DemanderUnPalindrome());
+
+            var aurevoir = ohce.DireAurevoir();
+
+            Assert.Equal(aurevoirAttendue, aurevoir);
+        }
+
     }
 }
+
